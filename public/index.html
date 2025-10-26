@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ChatProx</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <main class="container">
+      <section class="hero">
+        <h1>ChatProx</h1>
+        <p>A lightweight, self-hosted web proxy inspired by Ultraviolet.</p>
+        <form id="proxy-form" class="proxy-form">
+          <label for="proxy-url" class="sr-only">URL to proxy</label>
+          <input
+            type="url"
+            name="url"
+            id="proxy-url"
+            placeholder="https://example.com"
+            autocomplete="off"
+            required
+          />
+          <button type="submit">Launch</button>
+        </form>
+        <p class="note">
+          ChatProx rewrites HTML responses so that links continue to travel through the proxy.
+          Some modern sites with aggressive client-side protections may not load correctly.
+        </p>
+      </section>
+      <section class="viewer" id="viewer-section" hidden>
+        <header class="viewer-toolbar">
+          <span id="current-url">Loading…</span>
+          <button type="button" id="open-new-tab">Open in new tab</button>
+        </header>
+        <iframe id="proxy-frame" title="Proxied content" sandbox="allow-scripts allow-same-origin allow-forms" loading="lazy"></iframe>
+      </section>
+    </main>
+    <script src="/script.js" type="module"></script>
+  </body>
+</html>
