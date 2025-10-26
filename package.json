@@ -1,0 +1,17 @@
+{
+  "name": "chatprox",
+  "version": "0.1.0",
+  "description": "A lightweight web proxy inspired by Ultraviolet, built with Node.js.",
+  "type": "module",
+  "scripts": {
+    "start": "node src/server.js"
+  },
+  "keywords": [
+    "proxy",
+    "web",
+    "ultraviolet"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {}
+}
